@@ -5,9 +5,9 @@ var gamePattern = [];
 var started = false;
 var level = 0;
 
-$(document).keydown(function() {
+$("h1").click(function() {
   if (!started) {
-    $("#level-title").text("Level " + level);
+//     $("#level-title").text("Level " + level);
     nextSequence();
     started = true;
   }
@@ -25,6 +25,7 @@ $(".btn").click(function() {
 
 function nextSequence() {
   //this is from step 7
+  userClickedPattern = [];
   level++;
   $("#level-title").text("Level " + level)
 
@@ -66,7 +67,7 @@ function checkAnswer(currentLevel) {
     setTimeout(function() {
       $("body").removeClass("game-over");
     }, 200);
-    $("#level-title").text("Game Over, Press Any Key to Restart ");
+    $("#level-title").text("Game Over, Tap here to Restart ");
     startover();
   };
 };
