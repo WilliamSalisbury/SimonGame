@@ -5,9 +5,9 @@ var gamePattern = [];
 var started = false;
 var level = 0;
 
-$(document).click(function() {
+$("h1").click(function() {
   if (!started) {
-    $("#level-title").text("Level " + level);
+//     $("#level-title").text("Level " + level);
     nextSequence();
     started = true;
   }
@@ -67,7 +67,7 @@ function checkAnswer(currentLevel) {
     setTimeout(function() {
       $("body").removeClass("game-over");
     }, 200);
-    $("#level-title").text("Game Over, Refresh to Restart ");
+    $("#level-title").text("Game Over, Tap here to Restart ");
     startover();
   };
 };
